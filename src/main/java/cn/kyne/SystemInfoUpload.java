@@ -26,6 +26,7 @@ public class SystemInfoUpload {
 		headers.put("U-ApiKey", API_KEY);
 		JSONObject body = new JSONObject();
 		body.put("value", cpuTemperature);
-		httpClient.doPost(URL, body.toString(), null, headers);
+		String result = httpClient.doPost(URL, body.toString(), null, headers);
+		System.out.println(result);
 	}
 }
